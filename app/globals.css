@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-syne: 'Syne', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #070709;
+  color: #F5F5F7;
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0D0D11;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(249,115,22,0.4);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(249,115,22,0.7);
+}
+
+/* Selection */
+::selection {
+  background: rgba(249,115,22,0.3);
+  color: #fff;
+}
+
+/* Glass card utility */
+.glass-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-card-hover {
+  transition: all 0.3s ease;
+}
+.glass-card-hover:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(249,115,22,0.25);
+  box-shadow: 0 0 30px rgba(249,115,22,0.08);
+}
+
+/* Orange glow text */
+.text-glow {
+  text-shadow: 0 0 40px rgba(249,115,22,0.5);
+}
+
+/* Noise texture overlay */
+.noise-overlay::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-syne);
+  }
+}
