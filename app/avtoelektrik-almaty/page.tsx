@@ -5,7 +5,7 @@ import { CheckCircle, Star, Zap } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Автоэлектрик Алматы с выездом — Профессиональный ремонт электрики авто',
   description:
-    'Автоэлектрик Алматы — выездной специалист с опытом 7+ лет. Компьютерная диагностика, ремонт стартера, генератора, электропроводки. Выезд 30 минут, гарантия на работы.',
+    'Автоэлектрик Алматы — выездной специалист с опытом 10+ лет. Компьютерная диагностика, ремонт стартера, генератора, электропроводки. Выезд 30 минут, гарантия на работы.',
   alternates: { canonical: 'https://avtoelektrik-almaty.kz/avtoelektrik-almaty' },
   openGraph: {
     title: 'Автоэлектрик Алматы с выездом',
@@ -47,7 +47,7 @@ export default function AvtoelektrikAlmatyPage() {
   return (
     <InnerPageLayout
       eyebrow="Автоэлектрик Алматы"
-      title="Выездной автоэлектрик в Алматы — 7 лет опыта"
+      title="Выездной автоэлектрик в Алматы — 10 лет опыта"
       subtitle="Приеду к вам домой, в офис, на парковку или на трассу. Диагностика и ремонт электрики любых автомобилей прямо на месте — без эвакуатора и очередей."
       breadcrumb="Автоэлектрик Алматы"
     >
@@ -81,7 +81,7 @@ export default function AvtoelektrikAlmatyPage() {
                   Я частный автоэлектрик без офиса — это значит, что вы платите только за работу, без накруток за аренду помещения и зарплату менеджеров.
                 </p>
                 <p>
-                  За 7 лет работы я починил сотни автомобилей. Toyota, BMW, Mercedes, Hyundai, Kia, Lexus, Land Rover — знаю особенности каждой марки.
+                  За 10 лет работы я починил сотни автомобилей. Toyota, BMW, Mercedes, Hyundai, Kia, Lexus, Land Rover — знаю особенности каждой марки.
                 </p>
                 <p>
                   Работаю с профессиональными сканерами Launch X431 и Autel MaxiSys. Это позволяет точно диагностировать проблему, не меняя детали наугад.
@@ -90,7 +90,7 @@ export default function AvtoelektrikAlmatyPage() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { n: '7+', label: 'лет опыта', icon: Zap },
+                { n: '10+', label: 'лет опыта', icon: Zap },
                 { n: '184', label: 'клиента', icon: Star },
                 { n: '4.9', label: 'рейтинг', icon: Star },
                 { n: '30', label: 'мин. выезд', icon: Zap },

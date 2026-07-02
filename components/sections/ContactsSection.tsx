@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Phone, MessageCircle, Clock, MapPin, Zap } from 'lucide-react'
-import { PHONE, PHONE_HREF, WHATSAPP_HREF } from '@/lib/utils'
+import { PHONE, PHONE_HREF, WHATSAPP_NUMBER, WHATSAPP_HREF } from '@/lib/utils'
 
 const districts = [
   'Алмалинский', 'Бостандыкский', 'Медеуский',
@@ -59,7 +59,7 @@ export function ContactsSection() {
               </div>
               <div>
                 <div className="text-white/50 text-sm mb-1">WhatsApp</div>
-                <div className="font-display font-bold text-white text-2xl">{PHONE}</div>
+                <div className="font-display font-bold text-white text-2xl">{WHATSAPP_NUMBER}</div>
                 <div className="text-white/30 text-xs mt-1">Напишите — отвечу быстро</div>
               </div>
             </motion.a>

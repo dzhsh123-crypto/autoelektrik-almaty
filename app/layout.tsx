@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 const SITE_URL = 'https://avtoelektrik-almaty.kz'
-const PHONE = '+77771234567'
-const WHATSAPP = '77771234567'
+const PHONE = '+77011133665'
+const WHATSAPP = '+77071112530'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

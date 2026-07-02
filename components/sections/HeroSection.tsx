@@ -6,7 +6,7 @@ import { Clock, Star, Shield, Zap } from 'lucide-react'
 
 const stats = [
   { value: '30', unit: 'мин', label: 'Время выезда' },
-  { value: '7+', unit: 'лет', label: 'Опыта работы' },
+  { value: '10+', unit: 'лет', label: 'Опыта работы' },
   { value: '24/7', unit: '', label: 'Круглосуточно' },
   { value: '184', unit: '+', label: 'Довольных клиентов' },
 ]

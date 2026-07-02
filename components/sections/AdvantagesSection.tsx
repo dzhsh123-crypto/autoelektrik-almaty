@@ -6,7 +6,7 @@ import { Award, Car, MapPin, ShieldCheck, Timer, Wrench } from 'lucide-react'
 const advantages = [
   {
     icon: Award,
-    title: 'Опыт 7+ лет',
+    title: 'Опыт 10+ лет',
     desc: 'Работал в официальных дилерских центрах. Знаю особенности всех современных авто.',
     color: 'from-yellow-500/20 to-orange-500/10',
     iconColor: 'text-yellow-400',
