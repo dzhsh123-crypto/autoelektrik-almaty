@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Phone, MessageCircle, Clock, MapPin, Zap } from 'lucide-react'
 import { PHONE, PHONE_HREF, WHATSAPP_NUMBER, WHATSAPP_HREF } from '@/lib/utils'
 
@@ -123,11 +124,29 @@ export function ContactsSection() {
               </p>
             </div>
 
-            {/* Stylized map hint */}
-            <div className="mt-5 rounded-xl bg-dark-800 border border-white/5 h-32 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-8 h-8 text-brand-orange mx-auto mb-2 animate-bounce" />
-                <p className="text-white/30 text-xs">Алматы, Казахстан</p>
+            {/* Coverage photo — Almaty at night with the Tian Shan mountains */}
+            <div className="mt-5 rounded-xl bg-dark-800 border border-white/5 h-32 relative overflow-hidden">
+              <motion.div
+                initial={{ scale: 1 }}
+                whileInView={{ scale: 1.02 }}
+                viewport={{ once: true }}
+                transition={{ duration: 8, ease: 'easeOut' }}
+                className="absolute inset-0"
+              >
+                <Image
+                  src="https://images.unsplash.com/photo-1674732021595-0bf34e999f76?fm=jpg&q=80&w=1600&auto=format&fit=crop"
+                  alt="Алматы ночью на фоне гор"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </motion.div>
+              <div className="absolute inset-0 bg-gradient-to-t from-dark-950/90 via-dark-950/20 to-transparent" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center">
+                  <MapPin className="w-8 h-8 text-brand-orange mx-auto mb-2 drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]" />
+                  <p className="text-white/70 text-xs font-medium drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">Алматы, Казахстан</p>
+                </div>
               </div>
             </div>
           </motion.div>

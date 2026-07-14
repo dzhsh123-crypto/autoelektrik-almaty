@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { CTAButtons } from '@/components/ui/CTAButtons'
 import { Clock, Star, Shield, Zap } from 'lucide-react'
 
@@ -25,6 +26,29 @@ export function HeroSection() {
     >
       {/* Background layers */}
       <div className="absolute inset-0 bg-dark-950" />
+
+      {/* Ambient background photo — engine bay, subtle Ken Burns motion */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div
+          initial={{ scale: 1 }}
+          animate={{ scale: 1.03 }}
+          transition={{ duration: 22, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror' }}
+          className="absolute inset-0"
+        >
+          <Image
+            src="https://images.unsplash.com/photo-1627508795178-e852bd067a72?fm=jpg&q=80&w=2400&auto=format&fit=crop"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[68%_45%] sm:object-[75%_50%]"
+          />
+        </motion.div>
+        {/* Legibility gradients over the photo */}
+        <div className="absolute inset-0 bg-gradient-to-r from-dark-950 via-dark-950/90 to-dark-950/50 sm:via-dark-950/80 sm:to-dark-950/25" />
+        <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/10 to-dark-950/70" />
+      </div>
+
       <div className="absolute inset-0 bg-hero-glow" />
       {/* Grid pattern */}
       <div
